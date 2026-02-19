@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, MessageCircle, Heart, Share, UserPlus } from 'lucide-react';
+import { MessageCircle, Heart, Share, UserPlus } from 'lucide-react';
 
 interface User {
   id: number;
@@ -44,6 +44,7 @@ interface SocialProps {
 const Social: React.FC<SocialProps> = ({ user }) => {
   const [activeTab, setActiveTab] = useState<'feed' | 'friends' | 'discover'>('feed');
   const [showNewPost, setShowNewPost] = useState(false);
+  // const [showNewPost, setShowNewPost] = useState(false);
 
   const [friends] = useState<Friend[]>([
     {
